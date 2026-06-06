@@ -27,6 +27,7 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px; /* Increased font size generally */
             background-color: var(--bg-main);
             color: var(--text-main);
             overflow-x: hidden;
@@ -69,7 +70,7 @@
 
         .cover-left h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3.8rem; /* Increased font size */
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -1px;
@@ -80,7 +81,7 @@
         }
 
         .cover-left p {
-            font-size: 1.25rem;
+            font-size: 1.35rem; /* Increased font size */
             color: var(--text-muted);
             margin-bottom: 2rem;
             font-weight: 300;
@@ -183,7 +184,7 @@
         .logo-text {
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.35rem; /* Increased font size */
             letter-spacing: 0.5px;
             background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
             -webkit-background-clip: text;
@@ -221,7 +222,7 @@
             text-decoration: none;
             padding: 0.75rem 0.85rem;
             width: 100%;
-            font-size: 0.925rem;
+            font-size: 1rem; /* Increased font size */
             font-weight: 500;
             outline: none;
         }
@@ -241,7 +242,7 @@
         .footer-branding {
             border-top: 1px solid var(--border-card);
             padding-top: 1.5rem;
-            font-size: 0.75rem;
+            font-size: 0.8rem; /* Increased font size */
             color: var(--text-muted);
         }
 
@@ -293,7 +294,7 @@
 
         .dash-header h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.25rem;
+            font-size: 2.5rem; /* Increased font size */
             font-weight: 700;
             letter-spacing: -0.5px;
             background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
@@ -304,7 +305,7 @@
 
         .dash-header p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.05rem; /* Increased font size */
             margin-top: 0.25rem;
             outline: none;
         }
@@ -350,7 +351,7 @@
 
         .card-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.35rem; /* Increased font size */
             font-weight: 600;
             color: #fff;
             display: flex;
@@ -369,7 +370,7 @@
         /* KPI Grids */
         .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2.5rem;
         }
@@ -402,7 +403,7 @@
         }
 
         .kpi-label {
-            font-size: 0.75rem;
+            font-size: 0.85rem; /* Increased font size */
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -413,7 +414,7 @@
 
         .kpi-value {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.75rem;
+            font-size: 1.95rem; /* Increased font size */
             font-weight: 700;
             color: #fff;
             line-height: 1.2;
@@ -421,7 +422,7 @@
         }
 
         .kpi-subtext {
-            font-size: 0.8rem;
+            font-size: 0.9rem; /* Increased font size */
             color: var(--text-muted);
             margin-top: 0.5rem;
             display: flex;
@@ -449,51 +450,67 @@
             font-family: 'Outfit', sans-serif;
             color: var(--accent);
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem; /* Increased font size */
             font-weight: 600;
-            outline: none;
-        }
-
-        .strategy-block ul {
-            list-style-position: inside;
-            color: var(--text-muted);
-            font-size: 0.925rem;
-        }
-
-        .strategy-block ul li {
-            margin-bottom: 0.5rem;
             outline: none;
         }
 
         .strategy-block p {
             outline: none;
             color: var(--text-muted);
-            font-size: 0.925rem;
+            font-size: 1rem; /* Increased font size */
         }
 
-        .location-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.75rem;
-            list-style: none;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .location-list li {
-            background: rgba(255,255,255,0.02);
+        /* Table Responsive Styling & Scroll Indicator */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+            border-radius: 12px;
             border: 1px solid var(--border-card);
-            border-radius: 8px;
-            padding: 0.6rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            outline: none;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
         }
 
-        .location-list li::before {
-            content: '📍';
-            font-size: 0.85rem;
+        .table-scroll-indicator {
+            display: none;
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* Leads closure table styling */
+        .leads-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+        }
+
+        .leads-table th, .leads-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-card);
+            white-space: nowrap;
+        }
+
+        .leads-table th {
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            background: rgba(11, 18, 38, 0.9);
+        }
+
+        .leads-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .footer-logo-mike {
@@ -522,7 +539,7 @@
 
         .thank-you-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 4rem;
+            font-size: 4.2rem; /* Increased font size */
             font-weight: 800;
             background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
             -webkit-background-clip: text;
@@ -555,6 +572,168 @@
             height: 50px;
             background-color: rgba(255,255,255,0.15);
         }
+
+        /* RESPONSIVE DESIGN (MOBILE & TABLET) */
+        @media (max-width: 900px) {
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* Fixed Menu on Mobile (Stays fixed at the top of the viewport) */
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: auto;
+                padding: 1rem 1rem 0.5rem 1rem;
+                background-color: #0b0f19;
+                border-right: none;
+                border-bottom: 1px solid var(--border-card);
+                display: flex;
+                flex-direction: column;
+                z-index: 150;
+            }
+
+            .logo-area {
+                margin-bottom: 0.75rem;
+                justify-content: center;
+            }
+
+            .sidebar nav {
+                width: 100%;
+            }
+
+            /* Grid Menu (2 to 3 per row) */
+            .nav-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.4rem;
+                width: 100%;
+            }
+
+            .nav-item {
+                width: 100%;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                background: rgba(255, 255, 255, 0.02);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                backdrop-filter: blur(5px);
+            }
+
+            .nav-item a {
+                padding: 0.6rem 0.2rem;
+                font-size: 0.72rem;
+                font-weight: 600;
+                font-family: 'Outfit', sans-serif;
+                justify-content: center;
+                text-align: center;
+                color: var(--text-muted);
+                transition: all 0.3s ease;
+            }
+
+            .nav-item.active {
+                background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(24, 119, 242, 0.1) 100%);
+                border-color: var(--accent);
+                box-shadow: 0 0 12px rgba(0, 210, 255, 0.15);
+            }
+
+            .nav-item.active a {
+                color: #fff;
+            }
+
+            .nav-item.active a, .nav-item a:hover {
+                border-left: none;
+                border-bottom: none;
+                padding-left: 0.2rem;
+                padding-bottom: 0.6rem;
+                background: none;
+            }
+
+            .fullscreen-btn, .footer-branding {
+                display: none !important;
+            }
+
+            /* Adjust padding-top to prevent content from going behind the fixed sidebar on mobile */
+            .main-content {
+                padding: 1.2rem;
+                padding-top: 9.5rem; /* Space for grid sticky menu */
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            .cover-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+                margin-top: 1.5rem;
+            }
+
+            .cover-left h1 {
+                font-size: 2.5rem;
+            }
+
+            .cover-badge {
+                margin-bottom: 1rem;
+                align-self: center;
+            }
+
+            .closing-footer-layout {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .closing-divider {
+                display: none;
+            }
+
+            .cover-right {
+                order: -1;
+            }
+
+            .cover-art {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+
+            .strategy-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Auto-adjustable KPI grid on mobile (2 to 3 per line) */
+            .kpi-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                gap: 0.75rem;
+            }
+
+            .kpi-card {
+                padding: 1.2rem;
+                border-radius: 12px;
+            }
+
+            .kpi-label {
+                font-size: 0.70rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .kpi-value {
+                font-size: 1.5rem;
+            }
+
+            .kpi-subtext {
+                font-size: 0.75rem;
+                margin-top: 0.5rem;
+            }
+
+            /* Scroll indicators are displayed only on mobile */
+            .table-scroll-indicator {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -564,16 +743,16 @@
     <aside class="sidebar">
         <div>
             <div class="logo-area">
-                <div class="logo-text" contenteditable="true">Cia Turismo</div>
+                <div class="logo-text">Cia Turismo</div>
             </div>
             
             <nav>
                 <ul class="nav-list" id="sidebarNavList">
-                    <li class="nav-item active" data-target="cover" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#cover"><span contenteditable="true">Capa do Relatório</span></a></li>
-                    <li class="nav-item" data-target="meta-ads" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#meta-ads"><span contenteditable="true">Meta Ads (WhatsApp)</span></a></li>
-                    <li class="nav-item" data-target="targeting" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#targeting"><span contenteditable="true">Público e Regiões</span></a></li>
-                    <li class="nav-item" data-target="next-steps" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#next-steps"><span contenteditable="true">Próximos Passos</span></a></li>
-                    <li class="nav-item" data-target="finalizacao" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#finalizacao"><span contenteditable="true">Agradecimento</span></a></li>
+                    <li class="nav-item active" data-target="cover" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#cover"><span>Capa do Relatório</span></a></li>
+                    <li class="nav-item" data-target="meta-ads" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#meta-ads"><span>Meta Ads (WhatsApp)</span></a></li>
+                    <li class="nav-item" data-target="targeting" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#targeting"><span>Público e Regiões</span></a></li>
+                    <li class="nav-item" data-target="next-steps" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#next-steps"><span>Próximos Passos</span></a></li>
+                    <li class="nav-item" data-target="finalizacao" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)"><a href="#finalizacao"><span>Agradecimento</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -585,8 +764,8 @@
             </button>
             
             <div class="footer-branding">
-                <strong contenteditable="true">Maio 2026</strong>
-                <span contenteditable="true">Performance Dashboard</span>
+                <strong>Maio 2026</strong>
+                <span>Performance Dashboard</span>
             </div>
         </div>
     </aside>
@@ -596,23 +775,23 @@
         <!-- COVER SECTION -->
         <section id="cover" class="section-block active">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
-                <div class="cover-badge" contenteditable="true">🏆 Dashboard de Performance</div>
+                <div class="cover-badge">🏆 Dashboard de Performance</div>
             </div>
             
             <div class="cover-content" style="margin-top: 4rem;">
                 <div class="cover-left">
-                    <h1 contenteditable="true">Relatório de Tráfego Pago</h1>
-                    <p style="font-size: 1.75rem; color: #fff; margin-bottom: 0.75rem; font-family: 'Outfit';" contenteditable="true">Cia Turismo</p>
-                    <p style="font-size: 1.15rem; color: var(--text-muted); font-weight: 300; margin-bottom: 4rem;" contenteditable="true">Análise estratégica de tráfego pago e geração de leads para WhatsApp no período de Maio de 2026.</p>
+                    <h1>Relatório de Tráfego Pago</h1>
+                    <p style="font-size: 1.75rem; color: #fff; margin-bottom: 0.75rem; font-family: 'Outfit';">Cia Turismo</p>
+                    <p style="font-size: 1.15rem; color: var(--text-muted); font-weight: 300; margin-bottom: 4rem;">Análise estratégica de tráfego pago e geração de leads para WhatsApp no período de Maio de 2026.</p>
                     
                     <!-- Cover Signature Block -->
                     <div class="closing-footer-layout" style="justify-content: flex-start; margin-top: 2rem;">
                         <img src="logo-quantika.png" style="height: 35px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,210,255,0.3));" alt="QUÂNTIKA Logo">
-                        <div class="footer-logo-mike" style="margin-left: -0.5rem;" contenteditable="true">QUÂNTIKA</div>
+                        <div class="footer-logo-mike" style="margin-left: -0.5rem;">QUÂNTIKA</div>
                         <div class="closing-divider"></div>
                         <div style="text-align: left; font-size: 0.8rem; color: var(--text-muted);">
-                            <strong style="color: #fff; display: block; margin-bottom: 0.25rem;" contenteditable="true">CIA TURISMO</strong>
-                            <span contenteditable="true">Gestão de Mídia & Analytics | Maio 2026</span>
+                            <strong style="color: #fff; display: block; margin-bottom: 0.25rem;">CIA TURISMO</strong>
+                            <span>Gestão de Mídia & Analytics | Maio 2026</span>
                         </div>
                     </div>
                 </div>
@@ -628,54 +807,54 @@
         <section id="meta-ads" class="section-block">
             <div class="dash-header">
                 <div>
-                    <h2 contenteditable="true">Meta Ads (Facebook / Instagram)</h2>
-                    <p contenteditable="true">Resultados da campanha de geração de leads (mensagens) - Maio 2026</p>
+                    <h2>Meta Ads (Facebook / Instagram)</h2>
+                    <p>Resultados da campanha de geração de leads (mensagens) - Maio 2026</p>
                 </div>
             </div>
 
             <div class="kpi-grid">
                 <div class="kpi-card" style="--accent: var(--meta-color)">
-                    <div class="kpi-label" contenteditable="true">Pessoas Alcançadas</div>
-                    <div class="kpi-value" contenteditable="true">14.101</div>
-                    <div class="kpi-subtext" contenteditable="true">Alcance único da campanha</div>
+                    <div class="kpi-label">Pessoas Alcançadas</div>
+                    <div class="kpi-value">14.101</div>
+                    <div class="kpi-subtext">Alcance único da campanha</div>
                 </div>
                 <div class="kpi-card" style="--accent: var(--meta-color)">
-                    <div class="kpi-label" contenteditable="true">Impressões</div>
-                    <div class="kpi-value" contenteditable="true">27.997</div>
-                    <div class="kpi-subtext" contenteditable="true">Visualizações dos anúncios</div>
+                    <div class="kpi-label">Impressões</div>
+                    <div class="kpi-value">27.997</div>
+                    <div class="kpi-subtext">Visualizações dos anúncios</div>
                 </div>
                 <div class="kpi-card" style="--accent: var(--meta-color)">
-                    <div class="kpi-label" contenteditable="true">Leads da Meta</div>
-                    <div class="kpi-value" contenteditable="true">157</div>
-                    <div class="kpi-subtext" contenteditable="true">Contatos gerados p/ WhatsApp</div>
+                    <div class="kpi-label">Leads da Meta</div>
+                    <div class="kpi-value">157</div>
+                    <div class="kpi-subtext">Contatos gerados p/ WhatsApp</div>
                 </div>
                 <div class="kpi-card" style="--accent: var(--meta-color)">
-                    <div class="kpi-label" contenteditable="true">Custo por Lead</div>
-                    <div class="kpi-value" contenteditable="true">R$ 3,13</div>
-                    <div class="kpi-subtext" contenteditable="true">Custo médio por mensagem iniciada</div>
+                    <div class="kpi-label">Custo por Lead</div>
+                    <div class="kpi-value">R$ 3,13</div>
+                    <div class="kpi-subtext">Custo médio por mensagem iniciada</div>
                 </div>
                 <div class="kpi-card" style="--accent: var(--meta-color)">
-                    <div class="kpi-label" contenteditable="true">Investimento</div>
-                    <div class="kpi-value" contenteditable="true">R$ 491,35</div>
-                    <div class="kpi-subtext" contenteditable="true">Investimento total no período</div>
+                    <div class="kpi-label">Investimento</div>
+                    <div class="kpi-value">R$ 491,35</div>
+                    <div class="kpi-subtext">Investimento total no período</div>
                 </div>
             </div>
 
             <div class="glass-card">
                 <div class="card-header">
-                    <div class="card-title" contenteditable="true">
+                    <div class="card-title">
                         <div class="card-title-icon" style="background: var(--meta-color)"></div>
                         Estratégia & Objetivo - Formulário (Grupo WhatsApp)
                     </div>
                 </div>
                 <div class="strategy-container">
                     <div class="strategy-block">
-                        <h4 contenteditable="true">Objetivo & Campanha</h4>
-                        <p contenteditable="true">Gerar mensagens trazendo leads qualificados para as plataformas de WhatsApp do grupo da Cia Turismo.</p>
+                        <h4>Objetivo & Campanha</h4>
+                        <p>Gerar mensagens trazendo leads qualificados para as plataformas de WhatsApp do grupo da Cia Turismo.</p>
                     </div>
                     <div class="strategy-block">
-                        <h4 contenteditable="true">Estratégia Aplicada</h4>
-                        <p contenteditable="true">Utilização de campanhas focadas na geração de leads e mensagens para funil direto de atendimento no WhatsApp.</p>
+                        <h4>Estratégia Aplicada</h4>
+                        <p>Utilização de campanhas focadas na geração de leads e mensagens para funil direto de atendimento no WhatsApp.</p>
                     </div>
                 </div>
             </div>
@@ -685,44 +864,104 @@
         <section id="targeting" class="section-block">
             <div class="dash-header">
                 <div>
-                    <h2 contenteditable="true">Público e Localização</h2>
-                    <p contenteditable="true">Configuração geográfica e de segmentação demográfica do público-alvo</p>
+                    <h2>Público e Localização</h2>
+                    <p>Configuração geográfica e de segmentação demográfica do público-alvo</p>
                 </div>
             </div>
 
             <div class="glass-card">
                 <div class="card-header">
-                    <div class="card-title" contenteditable="true">
+                    <div class="card-title">
                         <div class="card-title-icon"></div>
                         Conjunto 01 - Público de Interesses
                     </div>
                 </div>
                 <div class="strategy-container" style="margin-bottom: 2rem;">
                     <div class="strategy-block">
-                        <h4 contenteditable="true">Faixa Etária</h4>
-                        <p contenteditable="true">Público composto por Homens e Mulheres entre 18 e 65+ anos.</p>
+                        <h4>Faixa Etária</h4>
+                        <p>Público composto por Homens e Mulheres entre 18 e 65+ anos.</p>
                     </div>
                     <div class="strategy-block">
-                        <h4 contenteditable="true">Alcance Geográfico</h4>
-                        <p contenteditable="true">Cidades e raios de segmentação aplicados no Paraná e arredores.</p>
+                        <h4>Alcance Geográfico</h4>
+                        <p>Cidades e raios de segmentação aplicados no Paraná e arredores.</p>
                     </div>
                 </div>
 
-                <h3 style="font-family: 'Outfit'; font-size: 1.1rem; margin-bottom: 1.25rem; color: #fff;" contenteditable="true">Cidades Segmentadas na Campanha:</h3>
+                <h3 style="font-family: 'Outfit'; font-size: 1.1rem; margin-bottom: 1rem; color: #fff;">Detalhamento das Cidades Segmentadas:</h3>
                 
-                <ul class="location-list">
-                    <li contenteditable="true">Cascavel, PR (+80 km)</li>
-                    <li contenteditable="true">Foz do Iguaçu, PR</li>
-                    <li contenteditable="true">Laranjeiras do Sul, PR (+40 km)</li>
-                    <li contenteditable="true">Realeza, PR (+20 km)</li>
-                    <li contenteditable="true">Goioerê, PR (+20 km)</li>
-                    <li contenteditable="true">Boa Vista da Aparecida, PR (+20 km)</li>
-                    <li contenteditable="true">Ibema, PR</li>
-                    <li contenteditable="true">Nova Aurora, PR (+40 km)</li>
-                    <li contenteditable="true">Toledo, PR</li>
-                    <li contenteditable="true">Umuarama, PR (+40 km)</li>
-                    <li contenteditable="true">Campo Mourão, PR</li>
-                </ul>
+                <!-- Swipe/Scroll Warning Indicator -->
+                <div class="table-scroll-indicator">
+                    <span>↔ Deslize para o lado para ver mais</span>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="leads-table">
+                        <thead>
+                            <tr>
+                                <th>Cidade / Estado</th>
+                                <th>Raio de Segmentação</th>
+                                <th>Público-Alvo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Cascavel, PR</td>
+                                <td>+80 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Foz do Iguaçu, PR</td>
+                                <td>Raio Padrão</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Laranjeiras do Sul, PR</td>
+                                <td>+40 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Realeza, PR</td>
+                                <td>+20 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Goioerê, PR</td>
+                                <td>+20 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Boa Vista da Aparecida, PR</td>
+                                <td>+20 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Ibema, PR</td>
+                                <td>Raio Padrão</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Nova Aurora, PR</td>
+                                <td>+40 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Toledo, PR</td>
+                                <td>Raio Padrão</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Umuarama, PR</td>
+                                <td>+40 km</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                            <tr>
+                                <td style="color: #fff; font-weight: 500;">Campo Mourão, PR</td>
+                                <td>Raio Padrão</td>
+                                <td>Homens e Mulheres (18 a 65+ anos)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -730,25 +969,25 @@
         <section id="next-steps" class="section-block">
             <div class="dash-header">
                 <div>
-                    <h2 contenteditable="true">Próximos Passos</h2>
-                    <p contenteditable="true">Próximas ações e estratégias de mídia planejadas para o mês de Junho</p>
+                    <h2>Próximos Passos</h2>
+                    <p>Próximas ações e estratégias de mídia planejadas para o mês de Junho</p>
                 </div>
             </div>
 
             <div class="glass-card">
                 <div class="card-header">
-                    <div class="card-title" contenteditable="true">
+                    <div class="card-title">
                         <div class="card-title-icon" style="background: var(--accent)"></div>
                         Planejamento Estratégico para Junho
                     </div>
                 </div>
                 <div style="padding: 1rem 0;">
-                    <p style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 1.5rem; outline: none;" contenteditable="true">
+                    <p style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 1.5rem; outline: none;">
                         Na campanha de formulário geramos no mês de Maio total de <strong>157 leads</strong> da meta, custando <strong>R$ 3,13 por lead</strong>.
                     </p>
-                    <div class="strategy-block" style="background: rgba(0, 210, 255, 0.03); border-color: rgba(0, 210, 255, 0.1);">
-                        <h4 contenteditable="true">Foco Operacional para Junho</h4>
-                        <p style="font-size: 1rem;" contenteditable="true">No mês de Junho continuaremos a campanha do formulário focada no crescimento e qualificação de leads do grupo de WhatsApp, otimizando criativos e públicos com base no aprendizado de Maio.</p>
+                    <div class="strategy-block" style="background: rgba(0, 210, 255, 0.03); border-color: rgba(0, 210, 255, 0.1); width: 100%;">
+                        <h4>Foco Operacional para Junho</h4>
+                        <p>No mês de Junho continuaremos a campanha do formulário focada no crescimento e qualificação de leads do grupo de WhatsApp, otimizando criativos e públicos com base no aprendizado de Maio.</p>
                     </div>
                 </div>
             </div>
@@ -757,23 +996,23 @@
         <!-- FINALIZATION SECTION -->
         <section id="finalizacao" class="section-block">
             <div class="final-presentation-block">
-                <h2 class="thank-you-title" contenteditable="true">Muito obrigado pela parceria!</h2>
+                <h2 class="thank-you-title">Muito obrigado pela parceria!</h2>
                 
                 <div class="kpi-grid" style="width: 100%; max-width: 900px; margin-top: 1rem; margin-bottom: 3rem;">
                     <div class="kpi-card" style="--accent: var(--accent)">
-                        <div class="kpi-label" contenteditable="true">Investimento Total (Meta Ads)</div>
-                        <div class="kpi-value" contenteditable="true">R$ 491,35</div>
-                        <div class="kpi-subtext" contenteditable="true">Investido em Maio 2026</div>
+                        <div class="kpi-label">Investimento Total (Meta Ads)</div>
+                        <div class="kpi-value">R$ 491,35</div>
+                        <div class="kpi-subtext">Investido em Maio 2026</div>
                     </div>
                     <div class="kpi-card" style="--accent: #00e676">
-                        <div class="kpi-label" contenteditable="true">Leads WhatsApp Gerados</div>
-                        <div class="kpi-value" contenteditable="true">157 Leads</div>
-                        <div class="kpi-subtext" contenteditable="true">Contatos via formulário</div>
+                        <div class="kpi-label">Leads WhatsApp Gerados</div>
+                        <div class="kpi-value">157 Leads</div>
+                        <div class="kpi-subtext">Contatos via formulário</div>
                     </div>
                     <div class="kpi-card" style="--accent: #ffd600">
-                        <div class="kpi-label" contenteditable="true">Custo Médio por Lead</div>
-                        <div class="kpi-value" contenteditable="true">R$ 3,13</div>
-                        <div class="kpi-subtext" contenteditable="true">Retorno sobre investimento de leads</div>
+                        <div class="kpi-label">Custo Médio por Lead</div>
+                        <div class="kpi-value">R$ 3,13</div>
+                        <div class="kpi-subtext">Retorno sobre investimento de leads</div>
                     </div>
                 </div>
 
@@ -781,11 +1020,11 @@
                     <!-- Closing Signature Block -->
                     <div class="closing-footer-layout">
                         <img src="logo-quantika.png" style="height: 35px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,210,255,0.3));" alt="QUÂNTIKA Logo">
-                        <div class="footer-logo-mike" style="margin-left: -0.5rem;" contenteditable="true">QUÂNTIKA</div>
+                        <div class="footer-logo-mike" style="margin-left: -0.5rem;">QUÂNTIKA</div>
                         <div class="closing-divider"></div>
                         <div style="text-align: left; font-size: 0.8rem; color: var(--text-muted);">
-                            <strong style="color: #fff; display: block; margin-bottom: 0.25rem;" contenteditable="true">CIA TURISMO</strong>
-                            <span contenteditable="true">Gestão de Mídia & Analytics | Maio 2026</span>
+                            <strong style="color: #fff; display: block; margin-bottom: 0.25rem;">CIA TURISMO</strong>
+                            <span>Gestão de Mídia & Analytics | Maio 2026</span>
                         </div>
                     </div>
                 </div>
@@ -799,96 +1038,112 @@
     function toggleFullScreen() {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().catch(err => {
-                alert(`Erro ao tentar ativar tela cheia: ${err.message}`);
+                console.error(`Error attempting to enable full-screen: ${err.message}`);
             });
         } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            }
+            document.exitFullscreen();
         }
     }
 
-    // Navigation routing logic
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', function(e) {
-            if (e.target.hasAttribute('contenteditable') || e.target.closest('[contenteditable="true"]')) return;
-            
+    // Tab Switching Logic
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('.section-block');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
             e.preventDefault();
-            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-            this.classList.add('active');
-            
-            const target = this.getAttribute('data-target');
-            document.querySelectorAll('.section-block').forEach(section => {
-                section.classList.remove('active');
-                if (section.id === target) {
-                    section.classList.add('active');
+            const target = item.getAttribute('data-target');
+
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+
+            sections.forEach(sec => {
+                sec.classList.remove('active');
+                if (sec.id === target) {
+                    sec.classList.add('active');
                 }
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 
-    // Drag and Drop ordering for navigation links
-    let dragSourceEl = null;
+    // Sidebar navigation items Drag and Drop sorting functionality
+    let dragSrcEl = null;
 
     function handleDragStart(e) {
-        dragSourceEl = e.currentTarget;
+        dragSrcEl = this;
         e.dataTransfer.effectAllowed = 'move';
-        e.dataTransfer.setData('text/html', e.currentTarget.innerHTML);
-        e.dataTransfer.setData('text/plain', e.currentTarget.getAttribute('data-target'));
-        e.currentTarget.style.opacity = '0.4';
+        e.dataTransfer.setData('text/html', this.innerHTML);
+        e.dataTransfer.setData('text/plain', this.getAttribute('data-target'));
+        this.style.opacity = '0.4';
     }
 
-    // Handle drag events
     function handleDragOver(e) {
         if (e.preventDefault) {
             e.preventDefault();
         }
-        e.currentTarget.classList.add('drag-over');
+        this.classList.add('drag-over');
         e.dataTransfer.dropEffect = 'move';
         return false;
     }
 
     function handleDragLeave(e) {
-        e.currentTarget.classList.remove('drag-over');
+        this.classList.remove('drag-over');
     }
 
     function handleDrop(e) {
         if (e.stopPropagation) {
             e.stopPropagation();
         }
-        
-        if (dragSourceEl !== e.currentTarget) {
-            const sourceHTML = dragSourceEl.innerHTML;
-            const sourceTarget = dragSourceEl.getAttribute('data-target');
+        this.classList.remove('drag-over');
+
+        if (dragSrcEl !== this) {
+            dragSrcEl.innerHTML = this.innerHTML;
+            this.innerHTML = e.dataTransfer.getData('text/html');
+
+            const sourceTarget = dragSrcEl.getAttribute('data-target');
+            const targetTarget = this.getAttribute('data-target');
             
-            dragSourceEl.innerHTML = e.currentTarget.innerHTML;
-            dragSourceEl.setAttribute('data-target', e.currentTarget.getAttribute('data-target'));
-            
-            e.currentTarget.innerHTML = sourceHTML;
-            e.currentTarget.setAttribute('data-target', sourceTarget);
-            
-            const wasActive = e.currentTarget.classList.contains('active');
-            const sourceActive = dragSourceEl.classList.contains('active');
-            
-            if (wasActive) {
-                e.currentTarget.classList.remove('active');
-                dragSourceEl.classList.add('active');
-            } else if (sourceActive) {
-                dragSourceEl.classList.remove('active');
-                e.currentTarget.classList.add('active');
-            }
+            dragSrcEl.setAttribute('data-target', targetTarget);
+            this.setAttribute('data-target', sourceTarget);
+
+            setupNavClicks();
         }
-        e.currentTarget.classList.remove('drag-over');
         return false;
     }
 
     function handleDragEnd(e) {
-        e.currentTarget.style.opacity = '1';
-        document.querySelectorAll('.nav-item').forEach(item => {
+        this.style.opacity = '1';
+        navItems.forEach(item => {
             item.classList.remove('drag-over');
         });
     }
+
+    function setupNavClicks() {
+        const items = document.querySelectorAll('.nav-item');
+        items.forEach(item => {
+            item.removeEventListener('click', handleItemClick);
+            item.addEventListener('click', handleItemClick);
+        });
+    }
+
+    function handleItemClick(e) {
+        e.preventDefault();
+        const target = this.getAttribute('data-target');
+
+        document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+        this.classList.add('active');
+
+        sections.forEach(sec => {
+            sec.classList.remove('active');
+            if (sec.id === target) {
+                sec.classList.add('active');
+            }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    setupNavClicks();
 </script>
 
 </body>
